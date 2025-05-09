@@ -1,8 +1,7 @@
 ## 📦 Class: ATM
 class Atm:
 ### 🧾 Attributes:  
- 
-    __initial_balance = 1000
+    __initial_balance = 5000
     __pin = 1234
 
     @staticmethod
@@ -18,7 +17,7 @@ class Atm:
     def deposit_money(self,amount:int):  
         if amount >= 1:
             Atm.__initial_balance += amount  
-            print(f"✅ Deposit successful. New balance: {Atm.__initial_balance} rupees")
+            print(f"✅ Deposit successful. New balance: ({Atm.__initial_balance}) rupees")
         else: 
             print("❌ Invalid amount. Must be positive.")   
           
@@ -27,7 +26,7 @@ class Atm:
         if amount <= self.__initial_balance:
             Atm.__initial_balance -= amount  
             print(f"You withdraw {amount} rupees")
-            print(f"✅ Withdrawal successful. Remaining balance: {Atm.__initial_balance} rupees")
+            print(f"✅ Withdrawal successful. Remaining balance: ({Atm.__initial_balance}) rupees")
         else: 
             print("❌ Insufficient balance.")  
     def exit(self):
